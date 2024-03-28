@@ -1,0 +1,70 @@
+.heading {
+   background-color: violet;
+    padding: 8px 3rem;
+    border-bottom: 1px solid red;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+  
+.heading-1 {
+    font-size: 1.75rem;
+    color: rgb(14, 11, 11);
+    padding: 0;
+    background-color: aliceblue;
+}
+
+.nav:hover{
+    border: 1px solid red;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px 4px rgba(0,0,0,.1);
+}
+
+
+.profile-options{
+    color:var( --text-color-primary);
+    font-size:2.5rem;
+}
+.menu{
+    border-right: 1px solid var(--accent-color);
+    color: black;
+}
+
+.person{
+    background-color:var(--accent-color);
+    border-radius: 0 4px 4px 0;
+    color: black;}
+.cursor-pointer:hover{
+    cursor: pointer;
+}
+
+.form-container{
+    background-color: rgb(158, 205, 205);
+    height: 2.75rem;
+    border-radius:4px;
+    padding: 14px;
+}
+
+.form_option{
+    font-size: 0.875rem;
+    padding: 8px;
+    color:black;
+}
+
+.border-right-1px{
+    border-right: 1px solid var(--accent-color);
+    color:blue;
+    height:70%;
+    padding: 10px;
+}
+
+.material-symbols-outlined {
+  padding: 2px;
+  border-left: 2px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
