@@ -1,1 +1,1 @@
-export {CategoryContext,CategoryProvider,useCategory} from './category-context';
+export { useCategory, CategoryProvider } from "./category-context";

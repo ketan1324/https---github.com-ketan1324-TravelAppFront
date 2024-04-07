@@ -1,6 +1,9 @@
 import { Fragment,useEffect,useState } from "react";
 import { Navbar,HotelCard,Categories } from "../../components";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { MyUseContext } from "../../context/category-context"
+
+
 
 
 import axios from "axios";
@@ -10,13 +13,15 @@ export const Home = ()=>{
         const [testData,setTestData] = useState([]);
         const [currentIndex,setCurrentIndex] =useState(16);
         const [hotels,setHotels]=useState([]);
+        const {hotelData} = MyUseContext();
+
         
         useEffect(()=>{
             (async ()=>{
                 try
                  {
                     var {data} = await axios.get( 
-                        "https://grumpy-nightshirt-jay.cyclic.app/api/hotels"
+                        `https://grumpy-nightshirt-jay.cyclic.app/api/hotels?category=${hotelData}`
                         );
                     console.log(data)
                     setTestData(data);
@@ -27,7 +32,7 @@ export const Home = ()=>{
                     console.log(err)
                  }
             })();   
-        },[]);
+        },[hotelData]);
 
         const fetchMoreData = ()=>{
             if(hotels.length >= testData.length){
